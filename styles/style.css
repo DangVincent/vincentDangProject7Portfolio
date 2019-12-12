@@ -147,3 +147,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 html {
   font-size: 125%; }
+
+.header__skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  color: #000000;
+  text-align: center; }
+  .header__skipLink:focus {
+    left: 0;
+    right: 0;
+    top: 0; }

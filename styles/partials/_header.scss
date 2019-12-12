@@ -1,3 +1,16 @@
 //HEADER STYLES STARTS HERE
-
+.header {
+    &__skipLink {
+        position: absolute;
+        left: -1000px;
+        top: 5px;
+        color: #000000;
+        text-align: center;
+        &:focus {
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+    }
+}
 //HEADER STYLES ENDS HERE
