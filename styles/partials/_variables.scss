@@ -1,0 +1,20 @@
+//MIXINS STARTS HERE
+@mixin fontHeaderSize($headerSizeValue) {
+    font-size: $headerSizeValue;
+    font-family: 'Comfortaa', cursive;
+}
+@mixin fontBaseSize($baseSizeValue) {
+    font-size: $baseSizeValue;
+    font-family: 'Montserrat', sans-serif;
+}
+//MIXINS ENDS HERE
+
+//COLOUR VARIABLES STARTS HERE
+$primaryColour: #000;
+$secondaryColour: #1f538d;
+$tertiaryColour: #fee265;
+$quatenaryColour: #df6f3f;
+$quinaryColour: #f2f2f2;
+$tertiaryColour: #3d9d72;
+$accentColour: #fff;
+//COLOUR VARIABLES ENDS HERE
