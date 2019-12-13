@@ -17,17 +17,17 @@
             <div class="wrapper">
                 <a href="#about" class="header__skipLink">Skip to main content.</a>
                 <nav class="header__nav">
-                    <ul class="header__list">
-                        <li class="header__item">
+                    <ul class="header__navList">
+                        <li class="header__navItem">
                             <a class="header__link" href="#about">about</a>
                         </li>
-                        <li class="header__item">
-                            <a class="header__link" href="#portfolio">portfolio</a>
+                        <li class="header__navItem">
+                            <a class="header__link" href="#projects">projects</a>
                         </li>
-                        <li class="header__item">
+                        <li class="header__navItem">
                             <a class="header__link" href="#skills">skills</a>
                         </li>
-                        <li class="header__item">
+                        <li class="header__navItem">
                             <a class="header__link" href="#contact">contact</a>
                         </li>
                     </ul>
@@ -35,7 +35,7 @@
                 <div class="header__title">
                     <h1 class="header__name">vincent dang</h1>
                     <p class="header__description">front end developer</p>
-                    <a class="header__button" href="#about"></a>
+                    <button class="header__button">resume</button>
                 </div>
             </div>
         </header>
@@ -46,7 +46,11 @@
             <section id="about" class="about">
                 <div class="wrapper">
                     <h2 class="about__heading">about me</h2>
-                    <p class="about__description"></p>
+                    <div class="about__description">
+                        <p class="about__text">hi, my name is Vince. I'm a front-end developer based in Toronto with a background in Computer and Network Support. I utilize my critical thinking skills to thoroughly analyze and isolate problems to enhance the functionality of any application I build.</p>
+                        <p class="about__text"></p>
+                        <p class="about__text"></p>
+                    </div>
                 </div>
             </section>
             <!-- ABOUT CONTENT ENDS HERE -->
@@ -55,43 +59,139 @@
                 <div class="wrapper">
                     <h2 class="projects__title">projects</h2>
                     <div class="projects__container">
-                        <h3 class="projects__heading"></h3>
-                        <p class="projects__description"></p>
-                        <ul class="projects__list">
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
+                        <div class="projects__imageContainer">
+                            <img class="projects__image" src="assets/project6DesktopImage.png" alt="A desktop view of a welcome page to the Anonymous Voting Booth Application that asks for a user account.">
+                            <img class="projects__image" src="assets/project6MobileImage.png" alt="A mobile view of a welcome page to the Anonymous Voting Booth Application that asks for a user account.">
+                        </div>
+                        <h3 class="projects__heading">anonymous voting booth</h3>
+                        <p class="projects__description">can't make a decision on something? Look no further as this application allows users to make polls where other users can make an anonymous vote on a particular topic like who prefers Windows over Mac? Users can view the polls they have created and can see the total votes for every public poll that they have voted for.</p>
+                        <ul class="projects__toolsList">
+                            <li class="projects__toolItem">
+                                <p class="projects__text">html5</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">css3</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">sass</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">javascript</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">react</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">firebase</p>
+                            </li>
+                        </ul>
+                        <ul class="projects__linksList">
+                            <li class="projects__linkItem">
+                                <a class="projects__link" href="https://anonvotingbooth.github.io/anonymousVotingBooth/">live</a>
+                            </li>
+                            <li class="projects__linkItem">
+                                <a class="projects__link" href="https://github.com/anonVotingBooth/anonymousVotingBooth">github</a>
+                            </li>
+                        </ul>
+                        div
+                    </div>
+                    <div class="projects__container">
+                        <div class="projects__imageContainer">
+                            <img class="projects__image" src="assets/project5DesktopImage.png" alt="A desktop view of a stock data tracker that displays increasing or decreasing numbers of a particular stock.">
+                            <img class="projects__image" src="assets/project5MobileImage.png" alt="A mobile view of a stock data tracker that displays increasing or decreasing numbers of a particular stock.">
+                        </div>
+                        <h3 class="projects__heading"><span class="projects__headingInner">h-l</span>index</h3>
+                        <p class="projects__description">want to know what the latest value on a particular stock? This application will keep you updated on the value of a stock equity that is retrieved from a Realtime stock API. The data displayed is divided into several timelines like if you want to know what the value was last min, day, month and weekly. Built using React, JavaScript, and APIs.</p>
+                        <ul class="projects__toolsList">
+                            <li class="projects__toolItem">
+                                <p class="projects__text">html5</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">css3</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">sass</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">javascript</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">react</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">api</p>
+                            </li>
+                        </ul>
+                        <ul class="projects__linksList">
+                            <li class="projects__linkItem">
+                                <a class="projects__link" href="https://dangvincent.github.io/vincent-dang-project-five/">live</a>
+                            </li>
+                            <li class="projects__linkIitem">
+                                <a class="projects__link" href="https://github.com/DangVincent/vincent-dang-project-five">github</a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="projects__projectContent">
-                        <h3 class="projects__heading"></h3>
-                        <p class="projects__description"></p>
-                        <ul class="projects__list">
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
+                    <div class="projects__container">
+                        <div class="projects__imageContainer">
+                            <img class="projects__image" src="assets/project3DesktopImage.png" alt="A desktop view of a game showcasing six ordered red dices and a start button on green background.">
+                            <img class="projects__image" src="assets/project3MobileImage.png" alt="A mobile view of a game showcasing six ordered red dices and a start button on green background.">
+                        </div>
+                        <h3 class="projects__heading">dice blackjack</h3>
+                        <p class="projects__description">want to gamble some money? This is a fun and addicting blackjack game that uses dices instead of a regular deck of cards. For a better experience, there are sound effects included. Built using CSS Grid, Flexbox, and jQuery.</p>
+                        <ul class="projects__toolsList">
+                            <li class="projects__toolItem">
+                                <p class="projects__text">html5</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">css3</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">sass</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">javascript</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">jquery</p>
+                            </li>
+                        </ul>
+                        <ul class="projects__linksList">
+                            <li class="projects__linkItem">
+                                <a class="projects__link" href="https://dangvincent.github.io/vincentDangProjectThree/">live</a>
+                            </li>
+                            <li class="projects__linkItem">
+                                <a class="projects__link" href="https://github.com/DangVincent/vincentDangProjectThree">github</a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="projects__projectContent">
-                        <h3 class="projects__heading"></h3>
-                        <p class="projects__description"></p>
-                        <ul class="projects__list">
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
+                    <div class="projects__container">
+                        <div class="projects__imageContainer">
+                            <img class="projects__image" src="assets/project2DesktopImage.png" alt="A desktop view of a tower of rainbow coloured fabric materials stacked and sewing spools with a scissor displayed beside it.">
+                            <img class="projects__image" src="assets/project2MobileImage.png" alt="A mobile view of a tower of rainbow coloured fabric materials stacked on top of each other and someone sewing.">
+                        </div>
+                        <h3 class="projects__heading">textilee</h3>
+                        <p class="projects__description">A multi-page PSD conversion that is fully responsive using Flexbox, Sass and Responsive Design. Designed by Juno College.</p>
+                        <ul class="projects__toolsList">
+                            <li class="projects__toolItem">
+                                <p class="projects__text">psd</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">html5</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">css3</p>
+                            </li>
+                            <li class="projects__toolItem">
+                                <p class="projects__text">sass</p>
+                            </li>
                         </ul>
-                    </div>
-                    <div class="projects__projectContent">
-                        <h3 class="projects__heading"></h3>
-                        <p class="projects__description"></p>
-                        <ul class="projects__list">
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
-                            <li class="projects__item"></li>
+                        <ul class="projects__linksList">
+                            <li class="projects__linkItem">
+                                <a class="projects__link" href="https://dangvincent.github.io/vincent-dang-project-two/">live</a>
+                            </li>
+                            <li class="projects__linkItem">
+                                <a class="projects__link" href="https://github.com/DangVincent/vincent-dang-project-two">github</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -103,51 +203,56 @@
                     <h2 class="skills__title">skills</h2>
                     <ul class="skills__list">
                         <li class="skills__item">
-                            <i class="fab fa-html5"></i>
-                            <p class="skills__type">html5</p>
+                            <i class="fab fa-html5" aria-hidden="true" aria-label="html5 icon"></i>
+                            <p class="skills__text">html5</p>
                         </li>
                         <li class="skills__item">
-                            <i class="fab fa-css3-alt"></i>
-                            <p class="skills__type">css3</p>
+                            <i class="fab fa-css3-alt" aria-hidden="true" aria-label="css3 icon"></i>
+                            <p class="skills__text">css3</p>
                         </li>
                         <li class="skills__item">
-                            <i class="fab fa-sass"></i>
-                            <p class="skills__type">sass</p>
+                            <i class="fab fa-sass" aria-hidden="true" aria-label="sass icon"></i>
+                            <p class="skills__text">sass</p>
                         </li>
                         <li class="skills__item">
-                            <i class="fab fa-js"></i>
-                            <p class="skills__type">javascript</p>
+                            <i class="fab fa-js" aria-hidden="true" aria-label="javascript icon"></i>
+                            <p class="skills__text">javascript</p>
                         </li>
                         <li class="skills__item">
-                            <i class="devicon-jquery-plain"></i>
-                            <p class="skills__type">jQuery</p>
+                            <i class="devicon-jquery-plain" aria-hidden="true" aria-label="jQuery icon"></i>
+                            <p class="skills__text">jQuery</p>
                         </li>
                         <li class="skills__item">
-                            <i class="fab fa-react"></i>
-                            <p class="skills__type">react</p>
+                            <i class="fab fa-react" aria-hidden="true" aria-label="react icon"></i>
+                            <p class="skills__text">react</p>
                         </li>
                         <li class="skills__item">
-                            <i class="devicon-git-plain"></i>
-                            <p class="skills__type">git</p>
+                            <i class="devicon-git-plain" aria-hidden="true" aria-label="git icon"></i>
+                            <p class="skills__text">git</p>
                         </li>
                         <li class="skills__item">
-                            <i class="fab fa-github"></i>
-                            <p class="skills__type">github</p>
+                            <i class="fab fa-github" aria-hidden="true" aria-label="github icon"></i>
+                            <p class="skills__text">github</p>
                         </li>
                         <li class="skills__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                            width="28" height="28"
-                            viewBox="0 0 48 48"
-                            style=" fill:#000000;"><path fill="#000000" d="M8,37L23.234,8.436c0.321-0.602,1.189-0.591,1.494,0.02L30,19L8,37z"></path><path fill="#000000" d="M8,36.992l5.546-34.199c0.145-0.895,1.347-1.089,1.767-0.285L26,22.992L8,36.992z"></path><path fill="#FFFFFF" d="M8.008 36.986L8.208 36.829 25.737 22.488 20.793 13.012z"></path><path fill="#000000" d="M8,37l26.666-25.713c0.559-0.539,1.492-0.221,1.606,0.547L40,37l-15,8.743 c-0.609,0.342-1.352,0.342-1.961,0L8,37z"></path></svg>
-                            <p class="skills__type">firebase</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0 0 48 48" style=" fill:#000000;">
+                                <path fill="#000000" d="M8,37L23.234,8.436c0.321-0.602,1.189-0.591,1.494,0.02L30,19L8,37z"></path>
+                                <path fill="#000000" d="M8,36.992l5.546-34.199c0.145-0.895,1.347-1.089,1.767-0.285L26,22.992L8,36.992z"></path>
+                                <path fill="#FFFFFF" d="M8.008 36.986L8.208 36.829 25.737 22.488 20.793 13.012z"></path>
+                                <path fill="#000000" d="M8,37l26.666-25.713c0.559-0.539,1.492-0.221,1.606,0.547L40,37l-15,8.743 c-0.609,0.342-1.352,0.342-1.961,0L8,37z"></path>
+                            </svg>
+                            <p class="skills__text">firebase</p>
                         </li>
                         <li class="skills__item">
                             <i class="fas fa-terminal"></i>
-                            <p class="skills__type">terminal</p>
+                            <p class="skills__text">terminal</p>
                         </li>
                         <li class="skills__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M17 16.47V7.39l-6 4.54M2.22 9.19a.858.858 0 0 1-.02-1.15l1.2-1.11c.2-.18.69-.26 1.05 0l3.42 2.61l7.93-7.25c.32-.32.87-.45 1.5-.12l4 1.91c.36.21.7.54.7 1.15v13.5c0 .4-.29.83-.6 1l-4.4 2.1c-.32.13-.92.01-1.13-.2l-8.02-7.3l-3.4 2.6c-.38.26-.85.19-1.05 0l-1.2-1.1c-.32-.33-.28-.87.05-1.2l3-2.7" fill="#000000"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
-                            <p class="skills__type">vscode</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path d="M17 16.47V7.39l-6 4.54M2.22 9.19a.858.858 0 0 1-.02-1.15l1.2-1.11c.2-.18.69-.26 1.05 0l3.42 2.61l7.93-7.25c.32-.32.87-.45 1.5-.12l4 1.91c.36.21.7.54.7 1.15v13.5c0 .4-.29.83-.6 1l-4.4 2.1c-.32.13-.92.01-1.13-.2l-8.02-7.3l-3.4 2.6c-.38.26-.85.19-1.05 0l-1.2-1.1c-.32-.33-.28-.87.05-1.2l3-2.7" fill="#000000"/>
+                                <rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" />
+                            </svg>
+                            <p class="skills__text">vscode</p>
                         </li>
                     </ul>
                 </div>
@@ -156,21 +261,21 @@
             <!-- CONTACT CONTENT STARTS HERE -->
             <section id="contact" class="contact">
                 <div class="wrapper">
-                    <h2 class="contact__title">get in touch</h2 class   >
-                    <form class="contact__form" action="">
+                    <h2 class="contact__title">get in touch</h2>
+                    <form class="contact__form" method="POST" action="http://www.focuspocus.io/magic/vncntdang@gmail.com">
                         <div class="contact__formCell">
                             <label class="visuallyHidden" for="name">Enter your name</label>
-                            <input id="name" class="contact__input" type="text" placeholder="Name">
+                            <input id="name" class="contact__input contact__input--name" name="Name" type="text" placeholder="Name" autocomplete="off">
                         </div>
                         <div class="contact__formCell">
                             <label class="visuallyHidden" for="emailAddress">Enter your email address</label>
-                            <input id="emailAddress" class="contact__input" type="text" placeholder="Email">
+                            <input id="emailAddress" class="contact__input contact__input--email" name="Email Address" type="text" placeholder="Email" autocomplete="off">
                         </div>
                         <div class="contact__formCell">
                             <label class="visuallyHidden" for="message">Enter your message</label>
-                            <input id="message" class="contact__input" type="textarea" placeholder="Leave a message here">
+                            <input id="message" class="contact__input contact__input--message" name="Message" type="textarea" placeholder="Leave a message here" autocomplete="off">
                         </div>
-                        <input class="contact__button" type="submit" value="submit">
+                        <input id="submit" class="contact__submit" type="submit" value="submit">
                     </form>
                 </div>
             </section>
@@ -179,27 +284,27 @@
         <!-- MAIN CONTENT ENDS HERE -->
         <!-- FOOTER CONTENT STARTS HERE -->
         <footer class="footer">
-            <p class="footer__text">copyright <i class="far fa-copyright"></i> 2019</p>
+            <p class="footer__text">copyright <i class="far fa-copyright" aria-hidden="true" aria-label="copyright icon"></i> 2019</p>
             <p class="footer__text">developed by vincent dang</p>
             <ul class="footer__socialList">
                 <li class="footer__socialIcon">
                     <a class="footer__link" href="https://twitter.com/VinceDCodes">
-                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-twitter" aria-hidden="true" aria-label="twitter icon"></i>
                     </a>
                 </li>
                 <li class="footer__socialIcon">
                     <a class="footer__link" href="https://www.linkedin.com/in/vincent-dang-18709712b/">
-                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-linkedin" aria-hidden="true" aria-label="linkedIn icon"></i>
                     </a>
                 </li>
                 <li class="footer__socialIcon">
                     <a class="footer__link" href="https://github.com/DangVincent">
-                        <i class="fab fa-github"></i>
+                        <i class="fab fa-github" aria-hidden="true" aria-label="github icon"></i>
                     </a>
                 </li>
                 <li class="footer__socialIcon">
                     <a class="footer__link" href="https://medium.com/@vncntdang">
-                        <i class="fab fa-medium"></i>
+                        <i class="fab fa-medium" aria-hidden="true" aria-label="medium icon"></i>
                     </a>
                 </li>
             </ul>
