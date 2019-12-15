@@ -1,5 +1,38 @@
 //FOOTER STYLES STARTS HERE
 .footer {
-    
+    background: $primaryColour;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+    &__text {
+        @include fontBaseSize(0.9rem);
+        color: $white;
+        text-transform: capitalize;
+    }
+    &__socialList {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__socialIcon {
+        margin: 0 20px;
+    }
+    &__link {
+        font-size: 1.6rem;
+        color: $white;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+            color: $secondaryColour;
+        }
+        &:hover .fab {
+            transform: scale(1.2);   
+            text-shadow: 2px 2px 1px $black;
+        }
+        .fab {
+            transition: transform 0.3s ease-in-out;
+        }
+    }
 }
 //FOOTER STYLES ENDS HERE

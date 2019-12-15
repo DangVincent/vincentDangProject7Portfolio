@@ -1,10 +1,132 @@
 //HEADER STYLES STARTS HERE
 .header {
+    background: $black;
+    color: $white;
+    padding-top: 20px;
+    min-height: 100vh;
+    &__navList {
+        @include fontHeaderSize(1rem);
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        position: fixed;
+        top: 25%;
+        right: 0;
+    }
+    &__navItem {
+        position: relative;
+        right: -150px;
+        margin: 20px 0;
+        width: 100%;
+        border-bottom: 2px solid $white;
+        transition: right 0.5s ease-in-out, border-bottom 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+            border-bottom: 2px solid $tertiaryColour;
+            right: 0;
+        }
+        
+    }
+    &__link {
+        display: flex;
+        letter-spacing: 2px;
+        justify-content: space-between;
+        color: $white;
+        text-transform: uppercase;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+            color: $tertiaryColour;
+        }
+    }
+    &__linkText {
+        padding-left: 20px;
+    }
+    &__title {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+    }
+    &__name {
+        @include fontHeaderSize(2rem);
+        letter-spacing: 5px;   
+    }
+    &__description {
+        @include fontBaseSize(1rem);
+        color: rgba(255,255,255,0.5);
+    }
+    &__scrollLink {
+        color: $white;
+        font-size: 1rem;
+        margin-top: 100px;
+        letter-spacing: 5px;
+        position: relative;
+        padding: 20px 15px 20px 20px;
+        //  border transition effect obtained from https://webdevtrick.com/css-border-transition-effects/
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        &--draw {
+            transition: color 0.25s;
+        }
+        &--draw::before, &--draw::after {
+            border: 2px solid transparent;
+            width: 0;
+            height: 0;
+        }
+        &--draw::before {
+            bottom: 0;
+            right: 0;
+        }
+        &--draw::after {
+            bottom: 0;
+            right: 0;
+        }
+        &--draw:hover {
+            color: $tertiaryColour;
+        }
+        &--draw:hover::before, &--draw:hover::after {
+            width: 100%;
+            height: 100%;
+        }
+        &--draw:hover::before {
+            border-bottom-color: $tertiaryColour;
+            border-left-color: $tertiaryColour;
+            transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+        }
+        &--draw:hover::after {
+            border-top-color: $tertiaryColour;
+            border-right-color: $tertiaryColour;
+            transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+        }
+        &--meet:hover {
+            color: $tertiaryColour;
+        }
+        &--meet::after {
+            bottom: 0;
+            right: 0;
+        }
+        &--meet:hover::before {
+            border-bottom-color: $tertiaryColour;
+            border-left-color: $tertiaryColour;
+        }
+        &--meet:hover::after {
+            border-top-color: $tertiaryColour;
+            border-right-color: $tertiaryColour;
+            transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+        }
+    }
+
     &__skipLink {
         position: absolute;
         left: -1000px;
         top: 5px;
-        color: #000000;
+        color: $white;
         text-align: center;
         &:focus {
             left: 0;

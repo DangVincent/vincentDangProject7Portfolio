@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.png" type="image/png">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="styles/style.css">
         <title>Vincent Dang</title>
@@ -20,23 +20,23 @@
                 <nav class="header__nav">
                     <ul class="header__navList">
                         <li class="header__navItem">
-                            <a class="header__link" href="#about">about</a>
+                            <a class="header__link" href="#about">01<span class="header__linkText">about</span></a>
                         </li>
                         <li class="header__navItem">
-                            <a class="header__link" href="#projects">projects</a>
+                            <a class="header__link" href="#projects">02<span class="header__linkText">projects</span></a>
                         </li>
                         <li class="header__navItem">
-                            <a class="header__link" href="#skills">skills</a>
+                            <a class="header__link" href="#skills">03<span class="header__linkText">skills</span></a>
                         </li>
                         <li class="header__navItem">
-                            <a class="header__link" href="#contact">contact</a>
+                            <a class="header__link" href="#contact">04<span class="header__linkText">contact</span></a>
                         </li>
                     </ul>
                 </nav>
                 <div class="header__title">
                     <h1 class="header__name">vincent dang</h1>
                     <p class="header__description">front end developer</p>
-                    <button class="header__button">resume</button>
+                    <a class="header__scrollLink header__scrollLink--draw header__scrollLink--meet" href="#about">next</a>
                 </div>
             </div>
         </header>
@@ -49,11 +49,11 @@
                     <h2 class="about__heading">about me</h2>
                     <div class="about__description">
                         <div class="about__imageContainer">
-                            <img class="about__image" src="" alt="A front view of Vince sitting down wearing a red dress shirt and smiling."> 
+                            <img class="about__image" src="assets/2019-fall-Vince-Dang.jpg" alt="A front view of Vince wearing a light blue dress shirt and smiling."> 
                         </div>
-                        <p class="about__text">hi, my name is Vince. I'm a front-end developer based in Toronto with a background in Computer and Network Support. I utilize my critical thinking skills to thoroughly analyze and solve technical problems in a creative way. </p>
-                        <p class="about__text"></p>
-                        <p class="about__text"></p>
+                        <p class="about__text">hi, my name is Vince. I'm a front-end developer based in Toronto with a background in Computer and Network Support. I utilize the critical thinking skills that I've learned to thoroughly analyze and solve technical problems that can enhance the functionality of the applications I build.</p>
+                        <p class="about__text">i continuously strive to learn new ways to become a better developer at creating applications that improve the user experience and are accessible to all types of users.</p>
+                        <p class="about__text">outside of coding, I would go lift weights at the gym to stay active, go on an adventure around Toronto, read psychological books and learn how to play the piano.</p>
                     </div>
                 </div>
             </section>
@@ -266,21 +266,26 @@
             <section id="contact" class="contact">
                 <div class="wrapper">
                     <h2 class="contact__title">get in touch</h2>
-                    <form class="contact__form" method="POST" action="http://www.focuspocus.io/magic/vncntdang@gmail.com">
-                        <div class="contact__formCell">
-                            <label class="visuallyHidden" for="name">Enter your name</label>
-                            <input id="name" class="contact__input contact__input--name" name="Name" type="text" placeholder="Name" autocomplete="off">
+                    <div class="contact__content">
+                        <div class="contact__imageContainer">
+                            <img class="contact__image" src="assets/2018-09 HackerYou Fall 4 Web Dev-3494.jpg" alt="A front view of Vince sitting down wearing a red dress shirt and smiling.">
                         </div>
-                        <div class="contact__formCell">
-                            <label class="visuallyHidden" for="emailAddress">Enter your email address</label>
-                            <input id="emailAddress" class="contact__input contact__input--email" name="Email Address" type="text" placeholder="Email" autocomplete="off">
-                        </div>
-                        <div class="contact__formCell">
-                            <label class="visuallyHidden" for="message">Enter your message</label>
-                            <input id="message" class="contact__input contact__input--message" name="Message" type="textarea" placeholder="Leave a message here" autocomplete="off">
-                        </div>
-                        <input id="submit" class="contact__submit" type="submit" value="submit">
-                    </form>
+                        <form class="contact__form" method="POST" action="http://www.focuspocus.io/magic/vncntdang@gmail.com">
+                            <div class="contact__formCell">
+                                <label for="name">Name:</label>
+                                <input id="name" class="contact__input contact__input--name" name="Name" type="text" placeholder="kevin smith" autocomplete="off">
+                            </div>
+                            <div class="contact__formCell">
+                                <label for="emailAddress">Email:</label>
+                                <input id="emailAddress" class="contact__input contact__input--email" name="Email Address" type="text" placeholder="kevinsmith@gmail.com" autocomplete="off">
+                            </div>
+                            <div class="contact__formCell">
+                                <label for="message">Message:</label>
+                                <textarea id="message" class="contact__input contact__input--message" name="Message" placeholder="Leave a message here" cols="40" rows="6"></textarea>
+                            </div>
+                            <input id="submit" class="contact__submit" type="submit" value="submit">
+                        </form>
+                    </div>
                 </div>
             </section>
             <!-- CONTACT CONTENT ENDS HERE -->
@@ -288,30 +293,31 @@
         <!-- MAIN CONTENT ENDS HERE -->
         <!-- FOOTER CONTENT STARTS HERE -->
         <footer class="footer">
-            <p class="footer__text">copyright <i class="far fa-copyright" aria-hidden="true" aria-label="copyright icon"></i> 2019</p>
-            <p class="footer__text">developed by vincent dang</p>
-            <ul class="footer__socialList">
-                <li class="footer__socialIcon">
-                    <a class="footer__link" href="https://twitter.com/VinceDCodes">
-                        <i class="fab fa-twitter" aria-hidden="true" aria-label="twitter icon"></i>
-                    </a>
-                </li>
-                <li class="footer__socialIcon">
-                    <a class="footer__link" href="https://www.linkedin.com/in/vincent-dang-18709712b/">
-                        <i class="fab fa-linkedin" aria-hidden="true" aria-label="linkedIn icon"></i>
-                    </a>
-                </li>
-                <li class="footer__socialIcon">
-                    <a class="footer__link" href="https://github.com/DangVincent">
-                        <i class="fab fa-github" aria-hidden="true" aria-label="github icon"></i>
-                    </a>
-                </li>
-                <li class="footer__socialIcon">
-                    <a class="footer__link" href="https://medium.com/@vncntdang">
-                        <i class="fab fa-medium" aria-hidden="true" aria-label="medium icon"></i>
-                    </a>
-                </li>
-            </ul>
+            <div class="wrapper">
+                <ul class="footer__socialList">
+                    <li class="footer__socialIcon">
+                        <a class="footer__link" href="https://twitter.com/VinceDCodes">
+                            <i class="fab fa-twitter" aria-hidden="true" aria-label="twitter icon"></i>
+                        </a>
+                    </li>
+                    <li class="footer__socialIcon">
+                        <a class="footer__link" href="https://www.linkedin.com/in/vincent-dang-18709712b/">
+                            <i class="fab fa-linkedin" aria-hidden="true" aria-label="linkedIn icon"></i>
+                        </a>
+                    </li>
+                    <li class="footer__socialIcon">
+                        <a class="footer__link" href="https://github.com/DangVincent">
+                            <i class="fab fa-github" aria-hidden="true" aria-label="github icon"></i>
+                        </a>
+                    </li>
+                    <li class="footer__socialIcon">
+                        <a class="footer__link" href="https://medium.com/@vncntdang">
+                            <i class="fab fa-medium" aria-hidden="true" aria-label="medium icon"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="footer__text"><i class="far fa-copyright" aria-hidden="true" aria-label="copyright icon"></i> 2019 developed by vincent dang</p>
+            </div>
         </footer>
         <!-- FOOTER CONTENT ENDS HERE -->
         <!-- SCRIPT LINKS STARTS HERE -->

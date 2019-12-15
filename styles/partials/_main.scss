@@ -1,13 +1,87 @@
 //MAIN STYLES STARTS HERE
+.about {
+    background: $primaryColour;
+}
+.projects {
+    background: $secondaryColour;
+}
+.skills {
+    background: $tertiaryColour;
+}
 .contact {
-    &__list {
-    
+    background: $quaternaryColour;
+    .wrapper {
+        padding: 100px 0;
     }
-    &__item {
+    &__title {
+        @include fontHeaderSize(2rem);
+        text-transform: uppercase;
+        text-align: center;
+        color: $secondaryColour;
+    }
+    &__content {
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__imageContainer {
+        border: 1px solid $black;
+        width: 25%;
+        // border-radius: 200px;
+        overflow: hidden;
+        order: 1;
+    }
+    &__image {
+        height: 100%;
+        object-fit: cover;
+    }
+    &__form {
 
     }
-    &__link {
-        
+    &__formCell {
+        margin-bottom: 25px;
+    }
+    &__input {
+        margin-top: 10px;
+        padding: 5px;
+        &:hover {
+            opacity: 0.8;
+        }
+        &:focus {
+            border-radius: 5px;
+            background: $white;
+            color: $black;
+            opacity: 1;
+            border-bottom: 2px solid transparent;
+        }
+        &--name {
+            width: 100%;
+            background: none;
+            border: none;
+            border-bottom: 2px solid $black;
+            opacity: 0.5;
+            color: $white;
+        }
+        &--email {
+            @extend .contact__input--name;
+        }
+        &--message {
+            @extend .contact__input--name;
+            resize: none;
+        }
+    }
+    &__submit {
+        background: none;
+        border: 1px solid $black;
+        color: $white;
+        opacity: 0.5;
+        padding: 5px 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
     }
 }
 //MAIN STYLES ENDS HERE
