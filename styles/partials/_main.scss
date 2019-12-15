@@ -7,36 +7,83 @@
 }
 .skills {
     background: $tertiaryColour;
+    .wrapper {
+        padding: 100px 0;
+        position: relative;
+    }
+    &__title {
+        @include fontHeaderSize(2rem);
+        text-align: center;
+        color: $secondaryColour;
+    }
+    &__title::before {
+        content: 'skills';
+        text-transform: uppercase;
+        position: absolute;
+        color: rgba(0,0,0,0.1);
+        font-size: 2.5rem;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 50px;
+        margin-top: 50px;
+    }
+    &__item {
+        text-align: center;
+        font-size: 3rem;
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__item:hover & {
+        &__text::first-letter {
+            padding-left: 5px;
+            border-left: 5px solid $white;
+        }
+    }
+
+    &__text {
+        @include fontBaseSize(0.9rem);
+        margin-top: 10px;
+        color: $white;
+        text-transform: uppercase;
+    }
 }
 .contact {
     background: $quaternaryColour;
     .wrapper {
         padding: 100px 0;
+        position: relative;
     }
     &__title {
         @include fontHeaderSize(2rem);
-        text-transform: uppercase;
         text-align: center;
         color: $secondaryColour;
+        z-index: 10;
+    }
+    &__title::before {
+        content: 'get in touch';
+        text-transform: uppercase;
+        position: absolute;
+        color: rgba(0,0,0,0.1);
+        font-size: 2.5rem;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     &__content {
         padding-top: 50px;
         display: flex;
         justify-content: space-around;
     }
-    &__imageContainer {
-        border: 1px solid $black;
-        width: 25%;
-        // border-radius: 200px;
-        overflow: hidden;
-        order: 1;
-    }
-    &__image {
-        height: 100%;
-        object-fit: cover;
-    }
     &__form {
-
+        display: flex;
+        flex-direction: column;
     }
     &__formCell {
         margin-bottom: 25px;

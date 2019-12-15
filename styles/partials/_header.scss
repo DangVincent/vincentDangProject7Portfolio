@@ -17,15 +17,18 @@
         position: relative;
         right: -150px;
         margin: 20px 0;
+        padding: 5px;
         width: 100%;
         border-bottom: 2px solid $white;
+        background: $black;
         transition: right 0.5s ease-in-out, border-bottom 0.3s ease-in-out;
-        &:hover,
-        &:focus {
+        &:hover {
             border-bottom: 2px solid $tertiaryColour;
             right: 0;
         }
-        
+        &:focus {
+            position: initial;
+        }
     }
     &__link {
         display: flex;
@@ -34,24 +37,39 @@
         color: $white;
         text-transform: uppercase;
         transition: color 0.3s ease-in-out;
-        &:hover {
+        &:hover,
+        &:focus {
             color: $tertiaryColour;
+        }
+        &:focus {
+            outline: none;
         }
     }
     &__linkText {
         padding-left: 20px;
     }
-    &__title {
+    &__content {
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-transform: uppercase;
+        position: relative;
     }
     &__name {
         @include fontHeaderSize(2rem);
         letter-spacing: 5px;   
+    }
+    &__name::before {
+        content: 'vincent dang';
+        text-transform: uppercase;
+        position: absolute;
+        color: rgba(255,255,255,0.1);
+        font-size: 2.5rem;
+        top: 31%;
+        left: 50%;
+        transform: translate(-50%, -31%);
     }
     &__description {
         @include fontBaseSize(1rem);
@@ -65,7 +83,8 @@
         position: relative;
         padding: 20px 15px 20px 20px;
         //  border transition effect obtained from https://webdevtrick.com/css-border-transition-effects/
-        &::before, &::after {
+        &::before, 
+        &::after {
             content: '';
             position: absolute;
             width: 100%;
@@ -74,7 +93,8 @@
         &--draw {
             transition: color 0.25s;
         }
-        &--draw::before, &--draw::after {
+        &--draw::before, 
+        &--draw::after {
             border: 2px solid transparent;
             width: 0;
             height: 0;
@@ -87,35 +107,47 @@
             bottom: 0;
             right: 0;
         }
-        &--draw:hover {
+        &--draw:hover,
+        &--draw:focus {
             color: $tertiaryColour;
         }
-        &--draw:hover::before, &--draw:hover::after {
+        &--draw:focus {
+            outline: none;
+        }
+        &--draw:hover::before,
+        &--draw:focus::before, 
+        &--draw:hover::after,
+        &--draw:focus::after {
             width: 100%;
             height: 100%;
         }
-        &--draw:hover::before {
+        &--draw:hover::before,
+        &--draw:focus::before {
             border-bottom-color: $tertiaryColour;
             border-left-color: $tertiaryColour;
             transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
         }
-        &--draw:hover::after {
+        &--draw:hover::after,
+        &--draw:focus::after {
             border-top-color: $tertiaryColour;
             border-right-color: $tertiaryColour;
             transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
         }
-        &--meet:hover {
+        &--meet:hover,
+        &--meet:focus {
             color: $tertiaryColour;
         }
         &--meet::after {
             bottom: 0;
             right: 0;
         }
-        &--meet:hover::before {
+        &--meet:hover::before,
+        &--meet:focus::before {
             border-bottom-color: $tertiaryColour;
             border-left-color: $tertiaryColour;
         }
-        &--meet:hover::after {
+        &--meet:hover::after,
+        &--meet:focus::after {
             border-top-color: $tertiaryColour;
             border-right-color: $tertiaryColour;
             transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;

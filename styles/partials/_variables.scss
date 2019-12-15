@@ -2,6 +2,7 @@
 @mixin fontHeaderSize($headerSizeValue) {
     font-size: $headerSizeValue;
     font-family: 'Comfortaa', cursive;
+    text-transform: uppercase;
 }
 @mixin fontBaseSize($baseSizeValue) {
     font-size: $baseSizeValue;
