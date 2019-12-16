@@ -1,10 +1,10 @@
 const myPortfolioApp = {};
 
-myPortfolioApp.buttonEvent() {
+myPortfolioApp.buttonEvent = function() {
     
 }
 
-myPortfolioApp.init() = function() {
+myPortfolioApp.init = function() {
     myPortfolioApp.buttonEvent();
 }
 
