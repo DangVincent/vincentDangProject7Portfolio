@@ -1,0 +1,29 @@
+//MIXINS STARTS HERE
+@mixin fontHeaderSize($headerSizeValue) {
+    font-size: $headerSizeValue;
+    font-family: 'Comfortaa', cursive;
+    text-transform: uppercase;
+}
+@mixin fontBaseSize($baseSizeValue) {
+    font-size: $baseSizeValue;
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin res1110 {
+    @media (max-width: 1110px) { @content; }
+}
+@mixin res960 {
+    @media (max-width: 960px) { @content; }
+}
+@mixin res730 {
+    @media (max-width: 730px) { @content; }
+}
+@mixin res600 {
+    @media (max-width: 600px) { @content; }
+}
+@mixin res535 {
+    @media (max-width: 535px) { @content; }
+}
+@mixin res400 {
+    @media (max-width: 400px) { @content; }
+}
+//MIXINS ENDS HERE

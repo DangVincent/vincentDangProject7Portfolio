@@ -56,10 +56,23 @@
         align-items: center;
         text-transform: uppercase;
         position: relative;
+        z-index: 1;
     }
     &__name {
         @include fontHeaderSize(2rem);
-        letter-spacing: 5px;   
+        letter-spacing: 5px;
+        @include res960 {
+            font-size: 1.6rem;
+        }
+        @include res730 {
+            font-size: 1.2rem;
+        }
+        @include res600 {
+            font-size: 1rem;
+        }
+        @include res535 {
+            font-size: 1.3rem;
+        }   
     }
     &__name::before {
         content: 'vincent dang';
@@ -67,13 +80,35 @@
         position: absolute;
         color: rgba(255,255,255,0.1);
         font-size: 2.5rem;
+        z-index: -1;
         top: 31%;
         left: 50%;
         transform: translate(-50%, -31%);
+        @include res960 {
+            font-size: 1.8rem;
+            top: 33%;
+            transform: translate(-50%, -33%);
+        }
+        @include res730 {
+            font-size: 1.4rem;
+            top: 34%;
+            transform: translate(-50%, -34%);
+        }
+        @include res600 {
+            font-size: 1.2rem;
+            top: 34%;
+            transform: translate(-50%, -34%);
+        }
+        @include res535 {
+            display: none;
+        }
     }
     &__description {
         @include fontBaseSize(1rem);
         color: rgba(255,255,255,0.5);
+        @include res960 {
+            font-size: 0.8rem;
+        }
     }
     &__scrollLink {
         color: $white;
@@ -82,6 +117,9 @@
         letter-spacing: 5px;
         position: relative;
         padding: 20px 15px 20px 20px;
+        @include res730 {
+            font-size: 0.8rem;
+        }
         //  border transition effect obtained from https://webdevtrick.com/css-border-transition-effects/
         &::before, 
         &::after {

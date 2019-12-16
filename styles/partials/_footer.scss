@@ -7,11 +7,6 @@
         align-items: center;
         padding: 15px 0;
     }
-    &__text {
-        @include fontBaseSize(0.9rem);
-        color: $white;
-        text-transform: capitalize;
-    }
     &__socialList {
         display: flex;
         margin-bottom: 20px;
@@ -23,6 +18,9 @@
         font-size: 1.6rem;
         color: $white;
         transition: color 0.3s ease-in-out;
+        @include res400 {
+            font-size: 1.2rem;
+        }
         &:hover {
             color: $secondaryColour;
         }
@@ -32,6 +30,15 @@
         }
         .fab {
             transition: transform 0.3s ease-in-out;
+        }
+    }
+    &__text {
+        @include fontBaseSize(0.9rem);
+        color: $white;
+        text-align: center;
+        text-transform: capitalize;
+        @include res400 {
+            font-size: 0.8rem;
         }
     }
 }
