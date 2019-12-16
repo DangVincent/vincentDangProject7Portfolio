@@ -8,6 +8,9 @@
     font-size: $baseSizeValue;
     font-family: 'Montserrat', sans-serif;
 }
+@mixin res1250 {
+    @media (max-width: 1250px) { @content; }
+}
 @mixin res1110 {
     @media (max-width: 1110px) { @content; }
 }

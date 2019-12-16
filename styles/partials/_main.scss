@@ -63,18 +63,20 @@
         display: flex;
         justify-content: space-around;
         margin-top: 50px;
-        @include res1110 {
+        @include res1250 {
             flex-direction: column;
             align-items: center;
         }
     }
     &__imageContainer {
-        width: 35%;
-        @include res1110 {
+        width: 25%;
+        @include res1250 {
             margin-bottom: 20px;
-            width: 40%;
         }
-        @include res600 {
+        @include res960 {
+            width: 30%;
+        }
+        @include res730 {
             width: 50%;
         }
     }
@@ -266,7 +268,7 @@
         background: $black;
         color: $white;
         padding: 10px 20px;
-        transition: color 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         @include res1110 {
             padding: 10px 50px;
         }
@@ -276,6 +278,7 @@
         &:hover,
         &:focus {
             color: $tertiaryColour;
+            text-shadow: 1px 1px 1px $quaternaryColour;
             box-shadow: 5px 5px $primaryColour;
         }
     }
@@ -312,7 +315,7 @@
     &__text {
         @include fontBaseSize(0.9rem);
         margin-top: 10px;
-        color: $white;
+        color: $black;
         text-transform: uppercase;
         opacity: 1;
         @include res960 {
