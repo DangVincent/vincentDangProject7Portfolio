@@ -201,21 +201,12 @@ ul li {
     top: 25%;
     right: 0; }
   .header__navItem {
-    position: relative;
-    right: -150px;
+    width: 100%; }
+  .header__link {
+    border-bottom: 2px solid #FFF;
     margin: 20px 0;
     padding: 5px;
-    width: 100%;
-    border-bottom: 2px solid #FFF;
     background: #000;
-    -webkit-transition: right 0.5s ease-in-out, border-bottom 0.3s ease-in-out;
-    -o-transition: right 0.5s ease-in-out, border-bottom 0.3s ease-in-out;
-    transition: right 0.5s ease-in-out, border-bottom 0.3s ease-in-out; }
-    .header__navItem:hover {
-      right: 0; }
-    .header__navItem:focus {
-      position: initial; }
-  .header__link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -223,14 +214,19 @@ ul li {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    position: relative;
+    right: -150px;
     color: #FFF;
     text-transform: uppercase;
-    -webkit-transition: color 0.3s ease-in-out;
-    -o-transition: color 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out; }
+    -webkit-transition: right 0.5s ease-in-out, color 0.3s ease-in-out;
+    -o-transition: right 0.5s ease-in-out, color 0.3s ease-in-out;
+    transition: right 0.5s ease-in-out, color 0.3s ease-in-out; }
     .header__link:hover, .header__link:focus {
       color: #DF6F3F; }
+    .header__link:hover {
+      right: 0; }
     .header__link:focus {
+      position: initial;
       outline: none; }
   .header__linkText {
     padding-left: 20px; }
@@ -318,11 +314,14 @@ ul li {
     margin-top: 100px;
     letter-spacing: 5px;
     position: relative;
-    padding: 20px 15px 20px 20px; }
+    padding: 20px 15px 20px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5); }
     @media (max-width: 730px) {
       .header__scrollLink {
         font-size: 0.8rem; } }
     .header__scrollLink::before, .header__scrollLink::after {
+      -webkit-box-sizing: inherit;
+      box-sizing: inherit;
       content: '';
       position: absolute;
       width: 100%;
@@ -563,7 +562,7 @@ ul li {
         order: initial; } }
   .projects__container:nth-of-type(even) .projects__image:nth-of-type(2) {
     left: -20px; }
-  .projects__container:nth-of-type(even) .projects__link:hover {
+  .projects__container:nth-of-type(even) .projects__link:hover, .projects__container:nth-of-type(even) .projects__link:focus {
     -webkit-box-shadow: -5px 5px #1A477A;
     box-shadow: -5px 5px #1A477A; }
   .projects__container:nth-of-type(2) .projects__toolItem:nth-of-type(6) {

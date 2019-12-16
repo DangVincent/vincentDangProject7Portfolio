@@ -15,33 +15,30 @@
         right: 0;
     }
     &__navItem {
-        position: relative;
-        right: -150px;
+        width: 100%;
+    }
+    &__link {
+        border-bottom: 2px solid $white;
         margin: 20px 0;
         padding: 5px;
-        width: 100%;
-        border-bottom: 2px solid $white;
         background: $black;
-        transition: right 0.5s ease-in-out, border-bottom 0.3s ease-in-out;
+        display: flex;
+        letter-spacing: 2px;
+        justify-content: space-between;
+        position: relative;
+        right: -150px;
+        color: $white;
+        text-transform: uppercase;
+        transition: right 0.5s ease-in-out, color 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+            color: $tertiaryColour;
+        }
         &:hover {
             right: 0;
         }
         &:focus {
             position: initial;
-        }
-    }
-    &__link {
-        display: flex;
-        letter-spacing: 2px;
-        justify-content: space-between;
-        color: $white;
-        text-transform: uppercase;
-        transition: color 0.3s ease-in-out;
-        &:hover,
-        &:focus {
-            color: $tertiaryColour;
-        }
-        &:focus {
             outline: none;
         }
     }
@@ -117,12 +114,14 @@
         letter-spacing: 5px;
         position: relative;
         padding: 20px 15px 20px 20px;
+        border: 1px solid rgba(255,255,255,0.5);
         @include res730 {
             font-size: 0.8rem;
         }
         //  border transition effect obtained from https://webdevtrick.com/css-border-transition-effects/
         &::before, 
         &::after {
+            box-sizing: inherit;
             content: '';
             position: absolute;
             width: 100%;

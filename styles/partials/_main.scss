@@ -135,7 +135,8 @@
         &__image:nth-of-type(2) {
             left: -20px;
         }
-        &__link:hover {
+        &__link:hover,
+        &__link:focus {
             box-shadow: -5px 5px $primaryColour;
         }
     }
