@@ -703,7 +703,7 @@ ul li {
 .skills {
   background: #DE6C3B; }
   .skills__title {
-    color: #FEE265; }
+    color: #000; }
   .skills__title::before {
     content: 'skills'; }
   .skills__list {
@@ -785,12 +785,9 @@ ul li {
     background: none;
     border: 1px solid #FEE265;
     color: #FFF;
-    opacity: 0.8;
     padding: 5px 20px;
     text-transform: uppercase;
     letter-spacing: 2px; }
-    .contact__submit:hover, .contact__submit:focus {
-      opacity: 1; }
 
 .footer {
   background: #1A477A; }
