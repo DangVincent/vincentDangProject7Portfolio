@@ -1,30 +1,186 @@
 //MAIN STYLES STARTS HERE
-.about {
-    background: $primaryColour;
-}
-.projects {
-    background: $secondaryColour;
-}
-.skills {
-    background: $tertiaryColour;
+.main {
     .wrapper {
         padding: 100px 0;
         position: relative;
     }
+    .about,
+    .projects,
+    .skills,
+    .contact {
+        &__title {
+            @include fontHeaderSize(2rem);
+            text-align: center;
+        }
+        &__title::before {
+            text-transform: uppercase;
+            position: absolute;
+            color: rgba(0,0,0,0.1);
+            font-size: 2.5rem;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+.about {
+    background: $primaryColour;
     &__title {
-        @include fontHeaderSize(2rem);
-        text-align: center;
+        color: $secondaryColour;
+    }
+    &__title::before {
+        content: 'about me';
+    }
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    &__imageContainer {
+        width: 35%;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__description {
+        @include fontBaseSize(1.2rem);
+        width: 45%;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__text {
+        margin-bottom: 20px;
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+}
+.projects {
+    background: $secondaryColour;
+    &__title {
+        color: $primaryColour;
+    }
+    &__title::before {
+        content: 'projects';
+    }
+    &__container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__container:nth-of-type(even) & {
+        &__imageContainer {
+            order: 1;
+        }
+    }
+    &__container:nth-of-type(2) & {
+        &__toolItem:nth-of-type(6) {
+            text-transform: uppercase;
+        }
+    }
+    &__container:nth-of-type(4) & {
+        &__toolItem:nth-of-type(4) {
+            text-transform: uppercase;
+        }
+    }
+    &__imageContainer {
+        width: 40%;
+        position: relative;
+    }
+    &__image {
+        &:nth-child(2) {
+            width: 20%;
+            position: absolute;
+            bottom: 0;
+            right: -20px;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+    }
+    &__heading {
+        @include fontHeaderSize(1.4rem);
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+    &__headingInner {
+        text-transform: uppercase;
+    }
+    &__description {
+        @include fontBaseSize(1rem);
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+    &__toolsList {
+        @include fontBaseSize(0.9rem);
+        display: flex;
+        margin: 20px 0;
+        text-transform: capitalize;
+        color: $primaryColour;
+    }
+    &__toolItem {
+        border-left: 2px solid $black;
+        &:nth-child(1),
+        &:nth-child(2) {
+            text-transform: uppercase;
+        }
+        &:first-child {
+            border: none;
+        }
+    }
+    &__toolItem:first-child & {
+        &__text {
+            padding-left: 0;
+        }
+    }
+    &__toolItem:last-child & {
+        &__text {
+            padding-right: 0;
+        }
+    }
+    &__text {
+        padding: 0 10px;
+    }
+    &__linksList {
+        display: flex;
+        margin-top: 5px;
+    }
+    &__linkItem {
+        margin: 0 10px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        text-transform: capitalize;
+        background: $black;
+        color: $white;
+        padding: 10px 20px;
+        transition: color 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+            color: $tertiaryColour;
+        }
+    }
+}
+.skills {
+    background: $tertiaryColour;
+    &__title {
         color: $secondaryColour;
     }
     &__title::before {
         content: 'skills';
-        text-transform: uppercase;
-        position: absolute;
-        color: rgba(0,0,0,0.1);
-        font-size: 2.5rem;
-        top: 70px;
-        left: 50%;
-        transform: translateX(-50%);
     }
     &__list {
         display: grid;
@@ -56,25 +212,11 @@
 }
 .contact {
     background: $quaternaryColour;
-    .wrapper {
-        padding: 100px 0;
-        position: relative;
-    }
     &__title {
-        @include fontHeaderSize(2rem);
-        text-align: center;
         color: $secondaryColour;
-        z-index: 10;
     }
     &__title::before {
         content: 'get in touch';
-        text-transform: uppercase;
-        position: absolute;
-        color: rgba(0,0,0,0.1);
-        font-size: 2.5rem;
-        top: 60px;
-        left: 50%;
-        transform: translateX(-50%);
     }
     &__content {
         padding-top: 50px;
@@ -87,26 +229,25 @@
     }
     &__formCell {
         margin-bottom: 25px;
+        color: $white;
     }
     &__input {
         margin-top: 10px;
         padding: 5px;
         &:hover {
-            opacity: 0.8;
+            color: $white;
         }
         &:focus {
             border-radius: 5px;
             background: $white;
             color: $black;
-            opacity: 1;
             border-bottom: 2px solid transparent;
         }
         &--name {
             width: 100%;
             background: none;
             border: none;
-            border-bottom: 2px solid $black;
-            opacity: 0.5;
+            border-bottom: 2px solid $secondaryColour;
             color: $white;
         }
         &--email {
@@ -119,9 +260,9 @@
     }
     &__submit {
         background: none;
-        border: 1px solid $black;
+        border: 1px solid $secondaryColour;
         color: $white;
-        opacity: 0.5;
+        opacity: 0.8;
         padding: 5px 20px;
         text-transform: uppercase;
         letter-spacing: 2px;
