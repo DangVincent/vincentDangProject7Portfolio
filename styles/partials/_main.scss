@@ -301,13 +301,6 @@
     &__item {
         text-align: center;
         font-size: 3rem;
-        opacity: 0.5;
-        @include res960 {
-            opacity: 1;
-        }
-        &:hover {
-            opacity: 1;
-        }
     }
     &__item:hover & {
         &__text::first-letter {
@@ -321,6 +314,7 @@
         margin-top: 10px;
         color: $white;
         text-transform: uppercase;
+        opacity: 1;
         @include res960 {
             font-size: 0.8rem;
         }

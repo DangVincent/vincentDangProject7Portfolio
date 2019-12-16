@@ -713,13 +713,7 @@ ul li {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); } }
   .skills__item {
     text-align: center;
-    font-size: 3rem;
-    opacity: 0.5; }
-    @media (max-width: 960px) {
-      .skills__item {
-        opacity: 1; } }
-    .skills__item:hover {
-      opacity: 1; }
+    font-size: 3rem; }
   .skills__item:hover .skills__text::first-letter {
     padding-left: 5px;
     border-left: 5px solid #FFF; }
@@ -728,7 +722,8 @@ ul li {
     font-family: 'Montserrat', sans-serif;
     margin-top: 10px;
     color: #FFF;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    opacity: 1; }
     @media (max-width: 960px) {
       .skills__text {
         font-size: 0.8rem; } }
