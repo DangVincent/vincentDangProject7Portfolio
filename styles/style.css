@@ -765,7 +765,10 @@ ul li {
     color: #FFF; }
   .contact__input {
     margin-top: 10px;
-    padding: 5px; }
+    padding: 5px;
+    -webkit-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
     .contact__input:hover {
       color: #FFF; }
     .contact__input:focus {
@@ -777,8 +780,7 @@ ul li {
       width: 100%;
       background: none;
       border: none;
-      border-bottom: 2px solid #FEE265;
-      color: #FFF; }
+      border-bottom: 2px solid #FEE265; }
     .contact__input--message {
       resize: none; }
   .contact__submit {
@@ -787,7 +789,15 @@ ul li {
     color: #FFF;
     padding: 5px 20px;
     text-transform: uppercase;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    -webkit-transition: color 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out; }
+    .contact__submit:hover, .contact__submit:focus {
+      -webkit-box-shadow: 5px 5px #FFF;
+      box-shadow: 5px 5px #FFF; }
 
 .footer {
   background: #1A477A; }
