@@ -323,10 +323,10 @@
             }
         }
     }
-
     &__text {
         @include fontBaseSize(0.9rem);
         margin-top: 10px;
+        text-align: center;
         color: $black;
         text-transform: uppercase;
         opacity: 1;
