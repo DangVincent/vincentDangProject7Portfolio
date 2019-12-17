@@ -9,7 +9,6 @@
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        z-index: 20;
         position: fixed;
         top: 25%;
         right: -150px;
@@ -20,7 +19,6 @@
     }
     &__navItem {
         width: 100%;
-        z-index: 20;
     }
     &__navItem:first-child & {
         &__link {
@@ -36,7 +34,6 @@
         border-bottom: 2px solid $white;
         margin: 20px 0;
         padding: 5px;
-        z-index: 20;
         background: $black;
         display: flex;
         letter-spacing: 2px;
@@ -72,7 +69,6 @@
         align-items: center;
         text-transform: uppercase;
         position: relative;
-        z-index: 10;
     }
     &__name {
         @include fontHeaderSize(2rem);
@@ -128,7 +124,6 @@
     }
     &__scrollLink {
         color: $white;
-        // z-index: 30;
         font-size: 1rem;
         margin-top: 100px;
         letter-spacing: 5px;
