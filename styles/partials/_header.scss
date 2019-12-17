@@ -10,6 +10,7 @@
         align-items: flex-start;
         flex-direction: column;
         position: fixed;
+        z-index: 1;
         top: 25%;
         right: -150px;
         @include res960 {
@@ -19,6 +20,7 @@
     }
     &__navItem {
         width: 100%;
+        position: relative;
     }
     &__navItem:first-child & {
         &__link {
