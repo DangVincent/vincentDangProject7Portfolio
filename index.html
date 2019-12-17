@@ -34,7 +34,7 @@
                 </nav>
                 <div class="header__content">
                     <h1 class="header__name">vincent dang</h1>
-                    <p class="header__description">front end developer</p>
+                    <p id="header__description" class="header__description"></p>
                     <a class="header__scrollLink header__scrollLink--draw header__scrollLink--meet" href="#about">next</a>
                 </div>
             </div>
@@ -291,14 +291,14 @@
                 <div class="wrapper">
                     <h2 class="contact__title">get in touch</h2>
                     <div class="contact__content">
-                        <form class="contact__form" method="POST" action="http://www.focuspocus.io/magic/vncntdang@gmail.com">
+                        <form id="contact__form" class="contact__form">
                             <div class="contact__formCell">
                                 <label for="name">Name:</label>
                                 <input id="name" class="contact__input contact__input--name" name="Name" type="text" placeholder="kevin smith" autocomplete="off" required>
                             </div>
                             <div class="contact__formCell">
                                 <label for="emailAddress">Email:</label>
-                                <input id="emailAddress" class="contact__input contact__input--email" name="Email Address" type="text" placeholder="kevinsmith@gmail.com" autocomplete="off" required>
+                                <input id="emailAddress" class="contact__input contact__input--email" name="Email Address" type="email" placeholder="kevinsmith@gmail.com" autocomplete="off" required>
                             </div>
                             <div class="contact__formCell">
                                 <label for="message">Message:</label>
@@ -343,6 +343,13 @@
         <!-- FOOTER CONTENT ENDS HERE -->
         <!-- SCRIPT LINKS STARTS HERE -->
         <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+        <!-- sweet alerts obtained from https://sweetalert2.github.io/ -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <!-- typed js obtained from https://github.com/mattboldt/typed.js/ -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <!-- vanta js obtained from https://www.vantajs.com/?effect=waves -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+        <script src="https://www.vantajs.com/dist/vanta.waves.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
         <!-- SCRIPT LINKS ENDS HERE -->
     </body>

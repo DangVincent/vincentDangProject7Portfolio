@@ -199,13 +199,23 @@ ul li {
     z-index: 20;
     position: fixed;
     top: 25%;
-    right: 0; }
+    right: -150px; }
+    @media (max-width: 960px) {
+      .header__navList {
+        right: -125px;
+        font-size: 0.8rem; } }
   .header__navItem {
-    width: 100%; }
+    width: 100%;
+    z-index: 20; }
+  .header__navItem:first-child .header__link {
+    margin-top: 0; }
+  .header__navItem:last-child .header__link {
+    margin-bottom: 0; }
   .header__link {
     border-bottom: 2px solid #FFF;
     margin: 20px 0;
     padding: 5px;
+    z-index: 20;
     background: #000;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -215,7 +225,7 @@ ul li {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
-    right: -150px;
+    right: 0;
     color: #FFF;
     text-transform: uppercase;
     -webkit-transition: right 0.5s ease-in-out, color 0.3s ease-in-out;
@@ -224,7 +234,10 @@ ul li {
     .header__link:hover, .header__link:focus {
       color: #DE6C3B; }
     .header__link:hover {
-      right: 0; }
+      right: 150px; }
+      @media (max-width: 960px) {
+        .header__link:hover {
+          right: 125px; } }
     .header__link:focus {
       position: initial;
       outline: none; }
@@ -247,7 +260,7 @@ ul li {
     align-items: center;
     text-transform: uppercase;
     position: relative;
-    z-index: 1; }
+    z-index: 10; }
   .header__name {
     font-size: 2rem;
     font-family: 'Comfortaa', cursive;
@@ -269,7 +282,7 @@ ul li {
     content: 'vincent dang';
     text-transform: uppercase;
     position: absolute;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.2);
     font-size: 2.5rem;
     z-index: -1;
     top: 31%;
@@ -768,9 +781,10 @@ ul li {
     padding: 5px;
     -webkit-transition: color 0.1s ease-in-out;
     -o-transition: color 0.1s ease-in-out;
-    transition: color 0.1s ease-in-out; }
+    transition: color 0.1s ease-in-out;
+    color: #FFF; }
     .contact__input:hover {
-      color: #FFF; }
+      color: #FEE265; }
     .contact__input:focus {
       border-radius: 5px;
       background: #FFF;
