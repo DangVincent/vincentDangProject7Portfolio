@@ -8,25 +8,25 @@
     font-size: $baseSizeValue;
     font-family: 'Montserrat', sans-serif;
 }
-@mixin res1250 {
+@mixin resGeneral {
     @media (max-width: 1250px) { @content; }
 }
-@mixin res1110 {
+@mixin resColonel {
     @media (max-width: 1110px) { @content; }
 }
-@mixin res960 {
+@mixin resLieutenant {
     @media (max-width: 960px) { @content; }
 }
-@mixin res730 {
+@mixin resCaptain {
     @media (max-width: 730px) { @content; }
 }
-@mixin res600 {
+@mixin resSergeant {
     @media (max-width: 600px) { @content; }
 }
-@mixin res535 {
+@mixin resCorporal {
     @media (max-width: 535px) { @content; }
 }
-@mixin res400 {
+@mixin resPrivate {
     @media (max-width: 400px) { @content; }
 }
 //MIXINS ENDS HERE

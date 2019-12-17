@@ -18,7 +18,7 @@
         font-size: 1.6rem;
         color: $white;
         transition: color 0.3s ease-in-out;
-        @include res400 {
+        @include resPrivate {
             font-size: 1.2rem;
         }
         &:hover .fab,
@@ -42,7 +42,7 @@
         color: $white;
         text-align: center;
         text-transform: capitalize;
-        @include res400 {
+        @include resPrivate {
             font-size: 0.8rem;
         }
     }

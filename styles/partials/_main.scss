@@ -4,7 +4,7 @@
         padding: 100px 0;
         position: relative;
         z-index: 0;
-        @include res535 {
+        @include resCorporal {
             padding: 50px 0;
         }
     }
@@ -15,16 +15,16 @@
         &__title {
             @include fontHeaderSize(2rem);
             text-align: center;
-            @include res960 {
+            @include resLieutenant {
                 font-size: 1.6rem;
             }
-            @include res730 {
+            @include resCaptain {
                 font-size: 1.2rem;
             }
-            @include res600 {
+            @include resSergeant {
                 font-size: 1rem;
             }
-            @include res535 {
+            @include resCorporal {
                 font-size: 1.3rem;
             }
         }
@@ -37,18 +37,18 @@
             top: 70px;
             left: 50%;
             transform: translateX(-50%);
-            @include res960 {
+            @include resLieutenant {
                 font-size: 1.8rem;
                 top: 80px;
             }
-            @include res730 {
+            @include resCaptain {
                 font-size: 1.4rem;
                 top: 85px;
             }
-            @include res600 {
+            @include resSergeant {
                 font-size: 1.2rem;
             }
-            @include res535 {
+            @include resCorporal {
                 display: none;
             }
         }
@@ -66,7 +66,7 @@
         display: flex;
         justify-content: space-around;
         margin-top: 50px;
-        @include res1250 {
+        @include resGeneral {
             flex-direction: column;
             align-items: center;
         }
@@ -76,13 +76,13 @@
         border-radius: 5px;
         overflow: hidden;
         box-shadow: 10px 10px 10px $black;
-        @include res1250 {
+        @include resGeneral {
             margin-bottom: 20px;
         }
-        @include res960 {
+        @include resLieutenant {
             width: 30%;
         }
-        @include res730 {
+        @include resCaptain {
             width: 50%;
         }
     }
@@ -98,13 +98,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        @include res1110 {
+        @include resColonel {
             width: 75%;
         }
-        @include res600 {
+        @include resSergeant {
             font-size: 0.9rem;
         }
-        @include res400 {
+        @include resPrivate {
             font-size: 0.8rem;
         }
     }
@@ -127,7 +127,7 @@
         margin-top: 50px;
         display: flex;
         justify-content: space-around;
-        @include res1110 {
+        @include resColonel {
             flex-direction: column;
             align-items: center;
         }
@@ -135,7 +135,7 @@
     &__container:nth-of-type(even) & {
         &__imageContainer {
             order: 1;
-            @include res1110 {
+            @include resColonel {
                 order: initial;
             }
         }
@@ -160,10 +160,10 @@
     &__imageContainer {
         width: 40%;
         position: relative;
-        @include res730 {
+        @include resCaptain {
             width: 60%;
         }
-        @include res535 {
+        @include resCorporal {
             width: 80%;
         }
     }
@@ -180,11 +180,11 @@
         flex-direction: column;
         justify-content: center;
         width: 40%;
-        @include res1110 {
+        @include resColonel {
             width: 50%;
             margin: 20px 0;
         }
-        @include res730 {
+        @include resCaptain {
             width: 80%;
         }
     }
@@ -192,10 +192,10 @@
         @include fontHeaderSize(1.4rem);
         text-transform: capitalize;
         margin-bottom: 20px;
-        @include res1110 {
+        @include resColonel {
             text-align: center;
         }
-        @include res730 {
+        @include resCaptain {
             font-size: 1.2rem;
         }
     }
@@ -209,10 +209,10 @@
         margin-bottom: 20px;
         text-transform: capitalize;
         color: $primaryColour;
-        @include res1110 {
+        @include resColonel {
             justify-content: center;
         }
-        @include res730 {
+        @include resCaptain {
             font-size: 0.8rem;
         }
     }
@@ -244,7 +244,7 @@
         &::first-letter {
             text-transform: capitalize;
         }
-        @include res730 {
+        @include resCaptain {
             font-size: 0.9rem;
         }
     }
@@ -252,10 +252,10 @@
         @include fontBaseSize(1rem);
         display: flex;
         margin-top: 25px;
-        @include res1110 {
+        @include resColonel {
             justify-content: center;
         }
-        @include res1110 {
+        @include resColonel {
             font-size: 0.8rem;
         }
     }
@@ -274,10 +274,10 @@
         color: $white;
         padding: 10px 20px;
         transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        @include res1110 {
+        @include resColonel {
             padding: 10px 50px;
         }
-        @include res960 {
+        @include resLieutenant {
             padding: 10px 30px;
         }
         &:hover,
@@ -304,7 +304,7 @@
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         grid-gap: 50px;
         margin-top: 50px;
-        @include res960 {
+        @include resLieutenant {
             grid-gap: 50px 10px;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         }
@@ -317,7 +317,7 @@
         &__text::first-letter {
             padding-left: 5px;
             border-left: 5px solid $white;
-            @include res600 {
+            @include resSergeant {
                 padding-left: 0;
                 border-left: none;
             }
@@ -330,7 +330,7 @@
         color: $black;
         text-transform: uppercase;
         opacity: 1;
-        @include res960 {
+        @include resLieutenant {
             font-size: 0.8rem;
         }
     }
@@ -352,7 +352,7 @@
         @include fontBaseSize(1rem);
         display: flex;
         flex-direction: column;
-        @include res730 {
+        @include resCaptain {
             width: 75%;
             font-size: 0.8rem;
         }

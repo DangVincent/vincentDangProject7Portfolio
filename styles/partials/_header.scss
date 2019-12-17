@@ -13,7 +13,7 @@
         z-index: 1;
         top: 25%;
         right: -150px;
-        @include res960 {
+        @include resLieutenant {
             right: -125px;
             font-size: 0.8rem;
         }
@@ -49,7 +49,7 @@
         &:focus {
             color: $tertiaryColour;
             right: 150px;
-            @include res960 {
+            @include resLieutenant {
                 right: 125px;
             }
         }
@@ -72,16 +72,16 @@
     &__name {
         @include fontHeaderSize(2rem);
         letter-spacing: 5px;
-        @include res960 {
+        @include resLieutenant {
             font-size: 1.6rem;
         }
-        @include res730 {
+        @include resCaptain {
             font-size: 1.2rem;
         }
-        @include res600 {
+        @include resSergeant {
             font-size: 1rem;
         }
-        @include res535 {
+        @include resCorporal {
             font-size: 1.3rem;
         }   
     }
@@ -95,29 +95,29 @@
         top: 31%;
         left: 50%;
         transform: translate(-50%, -31%);
-        @include res960 {
+        @include resLieutenant {
             font-size: 1.8rem;
             top: 33%;
             transform: translate(-50%, -33%);
         }
-        @include res730 {
+        @include resCaptain {
             font-size: 1.4rem;
             top: 34%;
             transform: translate(-50%, -34%);
         }
-        @include res600 {
+        @include resSergeant {
             font-size: 1.2rem;
             top: 34%;
             transform: translate(-50%, -34%);
         }
-        @include res535 {
+        @include resCorporal {
             display: none;
         }
     }
     &__description {
         @include fontBaseSize(1rem);
         color: rgba(255,255,255,0.5);
-        @include res960 {
+        @include resLieutenant {
             font-size: 0.8rem;
         }
     }
@@ -129,7 +129,7 @@
         position: relative;
         padding: 20px 15px 20px 20px;
         border: 1px solid rgba(255,255,255,0.5);
-        @include res730 {
+        @include resCaptain {
             font-size: 0.8rem;
         }
         //  border transition effect obtained from https://webdevtrick.com/css-border-transition-effects/
