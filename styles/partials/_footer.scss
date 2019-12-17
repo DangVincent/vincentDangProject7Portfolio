@@ -21,12 +21,17 @@
         @include res400 {
             font-size: 1.2rem;
         }
-        &:hover {
-            color: $secondaryColour;
-        }
-        &:hover .fab {
+        &:hover .fab,
+        &:focus .fab {
             transform: scale(1.2);   
             text-shadow: 2px 2px 1px $black;
+        }
+        &:hover,
+        &:focus {
+            color: $secondaryColour;
+        }
+        &:focus {
+            outline: none;
         }
         .fab {
             transition: transform 0.3s ease-in-out;

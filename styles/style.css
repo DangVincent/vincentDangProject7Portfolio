@@ -231,14 +231,12 @@ ul li {
     -o-transition: right 0.5s ease-in-out, color 0.3s ease-in-out;
     transition: right 0.5s ease-in-out, color 0.3s ease-in-out; }
     .header__link:hover, .header__link:focus {
-      color: #DE6C3B; }
-    .header__link:hover {
+      color: #DE6C3B;
       right: 150px; }
       @media (max-width: 960px) {
-        .header__link:hover {
+        .header__link:hover, .header__link:focus {
           right: 125px; } }
     .header__link:focus {
-      position: initial;
       outline: none; }
   .header__linkText {
     padding-left: 20px; }
@@ -500,7 +498,11 @@ ul li {
         -ms-flex-align: center;
         align-items: center; } }
   .about__imageContainer {
-    width: 25%; }
+    width: 25%;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-shadow: 10px 10px 10px #000;
+    box-shadow: 10px 10px 10px #000; }
     @media (max-width: 1250px) {
       .about__imageContainer {
         margin-bottom: 20px; } }
@@ -516,7 +518,7 @@ ul li {
     -o-object-fit: cover;
     object-fit: cover; }
   .about__description {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     width: 45%;
     color: #FFF;
@@ -532,7 +534,6 @@ ul li {
     justify-content: center; }
     @media (max-width: 1110px) {
       .about__description {
-        font-size: 1rem;
         width: 75%; } }
     @media (max-width: 600px) {
       .about__description {
@@ -632,14 +633,6 @@ ul li {
         font-size: 1.2rem; } }
   .projects__headingInner {
     text-transform: uppercase; }
-  .projects__description {
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif; }
-    .projects__description::first-letter {
-      text-transform: capitalize; }
-    @media (max-width: 730px) {
-      .projects__description {
-        font-size: 0.9rem; } }
   .projects__toolsList {
     font-size: 0.9rem;
     font-family: 'Montserrat', sans-serif;
@@ -648,7 +641,7 @@ ul li {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin-bottom: 20px;
     text-transform: capitalize;
     color: #1A477A; }
     @media (max-width: 1110px) {
@@ -671,13 +664,21 @@ ul li {
     padding-right: 0; }
   .projects__text {
     padding: 0 10px; }
+  .projects__description {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif; }
+    .projects__description::first-letter {
+      text-transform: capitalize; }
+    @media (max-width: 730px) {
+      .projects__description {
+        font-size: 0.9rem; } }
   .projects__linksList {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 5px; }
+    margin-top: 25px; }
     @media (max-width: 1110px) {
       .projects__linksList {
         -webkit-box-pack: center;
@@ -713,6 +714,8 @@ ul li {
       text-shadow: 1px 1px 1px #AF3A26;
       -webkit-box-shadow: 5px 5px #1A477A;
       box-shadow: 5px 5px #1A477A; }
+    .projects__link:focus {
+      outline: none; }
 
 .skills {
   background: #DE6C3B; }
@@ -736,6 +739,10 @@ ul li {
   .skills__item:hover .skills__text::first-letter {
     padding-left: 5px;
     border-left: 5px solid #FFF; }
+    @media (max-width: 600px) {
+      .skills__item:hover .skills__text::first-letter {
+        padding-left: 0;
+        border-left: none; } }
   .skills__text {
     font-size: 0.9rem;
     font-family: 'Montserrat', sans-serif;
@@ -844,13 +851,16 @@ ul li {
     @media (max-width: 400px) {
       .footer__link {
         font-size: 1.2rem; } }
-    .footer__link:hover {
-      color: #FEE265; }
-    .footer__link:hover .fab {
+    .footer__link:hover .fab,
+    .footer__link:focus .fab {
       -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
       transform: scale(1.2);
       text-shadow: 2px 2px 1px #000; }
+    .footer__link:hover, .footer__link:focus {
+      color: #FEE265; }
+    .footer__link:focus {
+      outline: none; }
     .footer__link .fab {
       -webkit-transition: -webkit-transform 0.3s ease-in-out;
       transition: -webkit-transform 0.3s ease-in-out;

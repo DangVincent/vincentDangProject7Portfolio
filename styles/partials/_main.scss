@@ -73,6 +73,9 @@
     }
     &__imageContainer {
         width: 25%;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 10px 10px 10px $black;
         @include res1250 {
             margin-bottom: 20px;
         }
@@ -89,14 +92,13 @@
         object-fit: cover;
     }
     &__description {
-        @include fontBaseSize(1.2rem);
+        @include fontBaseSize(1rem);
         width: 45%;
         color: $white;
         display: flex;
         flex-direction: column;
         justify-content: center;
         @include res1110 {
-            font-size: 1rem;
             width: 75%;
         }
         @include res600 {
@@ -200,20 +202,11 @@
     &__headingInner {
         text-transform: uppercase;
     }
-    &__description {
-        @include fontBaseSize(1rem);
-        &::first-letter {
-            text-transform: capitalize;
-        }
-        @include res730 {
-            font-size: 0.9rem;
-        }
-    }
     &__toolsList {
         @include fontBaseSize(0.9rem);
         display: flex;
         flex-wrap: wrap;
-        margin: 20px 0;
+        margin-bottom: 20px;
         text-transform: capitalize;
         color: $primaryColour;
         @include res1110 {
@@ -246,10 +239,19 @@
     &__text {
         padding: 0 10px;
     }
+    &__description {
+        @include fontBaseSize(1rem);
+        &::first-letter {
+            text-transform: capitalize;
+        }
+        @include res730 {
+            font-size: 0.9rem;
+        }
+    }
     &__linksList {
         @include fontBaseSize(1rem);
         display: flex;
-        margin-top: 5px;
+        margin-top: 25px;
         @include res1110 {
             justify-content: center;
         }
@@ -284,6 +286,9 @@
             text-shadow: 1px 1px 1px $quaternaryColour;
             box-shadow: 5px 5px $primaryColour;
         }
+        &:focus {
+            outline: none;
+        }
     }
 }
 .skills {
@@ -312,6 +317,10 @@
         &__text::first-letter {
             padding-left: 5px;
             border-left: 5px solid $white;
+            @include res600 {
+                padding-left: 0;
+                border-left: none;
+            }
         }
     }
 

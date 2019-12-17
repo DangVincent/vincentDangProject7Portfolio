@@ -48,15 +48,12 @@
         &:hover,
         &:focus {
             color: $tertiaryColour;
-        }
-        &:hover {
             right: 150px;
             @include res960 {
                 right: 125px;
             }
         }
         &:focus {
-            position: initial;
             outline: none;
         }
     }

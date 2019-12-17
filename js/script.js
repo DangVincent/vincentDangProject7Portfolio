@@ -17,10 +17,7 @@ myPortfolioApp.typedEvent = function() {
     const typed = new Typed('#header__description', {
         strings: [
             'welcome to my site',
-            'i^100',
-            'am^100',
-            'a^100',
-            'front end developer',
+            'front end developer'
         ],
         typeSpeed: 100,
         showCursor: false,
