@@ -41,6 +41,7 @@
         letter-spacing: 2px;
         justify-content: space-between;
         position: relative;
+        z-index: 1;
         right: 0;
         color: $white;
         text-transform: uppercase;
@@ -72,14 +73,15 @@
     &__name {
         @include fontHeaderSize(2rem);
         letter-spacing: 5px;
-        @include resLieutenant {
+        color: $black;
+        @include resColonel {
             font-size: 1.6rem;
         }
-        @include resCaptain {
-            font-size: 1.2rem;
+        @include resLieutenant {
+            font-size: 1.4rem;
         }
         @include resSergeant {
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
         @include resCorporal {
             font-size: 1.3rem;
@@ -89,46 +91,40 @@
         content: 'vincent dang';
         text-transform: uppercase;
         position: absolute;
-        color: rgba(255,255,255,0.2);
+        color: $primaryColour;
+        opacity: 0.5;
         font-size: 2.5rem;
         z-index: -1;
-        top: 31%;
+        top: 210px;
         left: 50%;
-        transform: translate(-50%, -31%);
+        transform: translate(-50%);
+        @include resGeneral {
+            font-size: 2.3rem;
+        }
+        @include resColonel {
+            font-size: 1.9rem;
+            top: 220px;
+        }
         @include resLieutenant {
-            font-size: 1.8rem;
-            top: 33%;
-            transform: translate(-50%, -33%);
-        }
-        @include resCaptain {
-            font-size: 1.4rem;
-            top: 34%;
-            transform: translate(-50%, -34%);
-        }
-        @include resSergeant {
-            font-size: 1.2rem;
-            top: 34%;
-            transform: translate(-50%, -34%);
-        }
-        @include resCorporal {
             display: none;
         }
     }
     &__description {
         @include fontBaseSize(1rem);
-        color: rgba(255,255,255,0.5);
+        height: 0;
+        color: rgba(0,0,0,0.8);
         @include resLieutenant {
             font-size: 0.8rem;
         }
     }
     &__scrollLink {
-        color: $white;
+        color: $black;
         font-size: 1rem;
         margin-top: 100px;
         letter-spacing: 5px;
         position: relative;
         padding: 20px 15px 20px 20px;
-        border: 1px solid rgba(255,255,255,0.5);
+        border: 1px solid rgba(0,0,0,0.5);
         @include resCaptain {
             font-size: 0.8rem;
         }
@@ -160,7 +156,7 @@
         }
         &--draw:hover,
         &--draw:focus {
-            color: $tertiaryColour;
+            color: $primaryColour;
         }
         &--draw:focus {
             outline: none;
@@ -174,19 +170,19 @@
         }
         &--draw:hover::before,
         &--draw:focus::before {
-            border-bottom-color: $tertiaryColour;
-            border-left-color: $tertiaryColour;
+            border-bottom-color: $primaryColour;
+            border-left-color: $primaryColour;
             transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
         }
         &--draw:hover::after,
         &--draw:focus::after {
-            border-top-color: $tertiaryColour;
-            border-right-color: $tertiaryColour;
+            border-top-color: $primaryColour;
+            border-right-color: $primaryColour;
             transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
         }
         &--meet:hover,
         &--meet:focus {
-            color: $tertiaryColour;
+            color: $primaryColour;
         }
         &--meet::after {
             bottom: 0;
@@ -194,13 +190,13 @@
         }
         &--meet:hover::before,
         &--meet:focus::before {
-            border-bottom-color: $tertiaryColour;
-            border-left-color: $tertiaryColour;
+            border-bottom-color: $primaryColour;
+            border-left-color: $primaryColour;
         }
         &--meet:hover::after,
         &--meet:focus::after {
-            border-top-color: $tertiaryColour;
-            border-right-color: $tertiaryColour;
+            border-top-color: $primaryColour;
+            border-right-color: $primaryColour;
             transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
         }
     }

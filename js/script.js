@@ -1,27 +1,28 @@
 const myPortfolioApp = {};
 
 myPortfolioApp.backgroundEffect = function() {
+
     VANTA.WAVES({
         el: '#home',
-        color: 0xe1011,
+        color: 0x595958,
         shininess: 40.00,
         waveHeight: 9.50,
         waveSpeed: 0.60,
         zoom: 0.9
-    })
+    });
 }
 
 // Typed event function will control how the header description is typed out 
 myPortfolioApp.typedEvent = function() {
 
-    const typed = new Typed('#header__description', {
+    const typed = new Typed('#header__descriptionInner', {
         strings: [
             'welcome to my site',
             'front end developer'
         ],
         typeSpeed: 100,
-        showCursor: false,
-        backSpeed: 20
+        backSpeed: 20,
+        
     });
 }
 
@@ -36,7 +37,7 @@ myPortfolioApp.linkEvent = function() {
 
         var position = $($(this).attr('href')).offset().top;
 
-        $("body, html").animate({
+        $('body, html').animate({
             scrollTop: position
         }, 500, 'swing');
     });

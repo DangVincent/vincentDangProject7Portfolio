@@ -144,6 +144,7 @@
         }
         &__link:hover,
         &__link:focus {
+            text-shadow: -2px 2px 1px $primaryColour;
             box-shadow: -5px 5px $primaryColour;
         }
     }
@@ -282,8 +283,7 @@
         }
         &:hover,
         &:focus {
-            color: $tertiaryColour;
-            text-shadow: 1px 1px 1px $quaternaryColour;
+            text-shadow: 2px 2px 1px $primaryColour;
             box-shadow: 5px 5px $primaryColour;
         }
         &:focus {
@@ -292,42 +292,32 @@
     }
 }
 .skills {
-    background: $tertiaryColour;
+    background: $primaryColour;
     &__title {
-        color: $black;
+        color: $secondaryColour;
     }
     &__title::before {
         content: 'skills';
     }
     &__list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         grid-gap: 50px;
         margin-top: 50px;
         @include resLieutenant {
             grid-gap: 50px 10px;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         }
     }
     &__item {
+        color: $secondaryColour;
         text-align: center;
         font-size: 3rem;
-    }
-    &__item:hover & {
-        &__text::first-letter {
-            padding-left: 5px;
-            border-left: 5px solid $white;
-            @include resSergeant {
-                padding-left: 0;
-                border-left: none;
-            }
-        }
     }
     &__text {
         @include fontBaseSize(0.9rem);
         margin-top: 10px;
         text-align: center;
-        color: $black;
+        color: $white;
         text-transform: uppercase;
         opacity: 1;
         @include resLieutenant {
@@ -336,9 +326,9 @@
     }
 }
 .contact {
-    background: $quaternaryColour;
+    background: $secondaryColour;
     &__title {
-        color: $secondaryColour;
+        color: $black;
     }
     &__title::before {
         content: 'get in touch';
@@ -359,27 +349,31 @@
     }
     &__formCell {
         margin-bottom: 25px;
-        color: $white;
+        color: $black;
     }
     &__input {
         margin-top: 10px;
         padding: 5px;
         transition: color 0.1s ease-in-out;
-        color: $white;
+        color: $black;
         &:hover {
-            color: $secondaryColour;
+            color: $primaryColour;
         }
         &:focus {
             border-radius: 5px;
-            background: $white;
-            color: $black;
+            background: $black;
+            color: $white;
             border-bottom: 2px solid transparent;
         }
         &--name {
             width: 100%;
             background: none;
             border: none;
-            border-bottom: 2px solid $secondaryColour;
+            border: 2px solid $black;
+            &::placeholder {
+                color: $black;
+                opacity: 0.9;
+            }
         }
         &--email {
             @extend .contact__input--name;
@@ -391,15 +385,16 @@
     }
     &__submit {
         background: none;
-        border: 1px solid $secondaryColour;
-        color: $white;
+        border: 2px solid $black;
+        color: $black;
         padding: 5px 20px;
         text-transform: uppercase;
         letter-spacing: 2px;
         transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
         &:hover,
         &:focus {
-            box-shadow: 5px 5px $white;
+            text-shadow: 2px 2px 1px $primaryColour;
+            box-shadow: 5px 5px $primaryColour;
         }
     }
 }
