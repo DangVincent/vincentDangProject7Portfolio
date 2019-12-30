@@ -144,7 +144,6 @@
         }
         &__link:hover,
         &__link:focus {
-            text-shadow: -2px 2px 1px $primaryColour;
             box-shadow: -5px 5px $primaryColour;
         }
     }
@@ -240,6 +239,9 @@
     &__text {
         padding: 0 10px;
     }
+    &__textInner {
+        text-transform: lowercase;
+    }
     &__description {
         @include fontBaseSize(1rem);
         &::first-letter {
@@ -283,7 +285,6 @@
         }
         &:hover,
         &:focus {
-            text-shadow: 2px 2px 1px $primaryColour;
             box-shadow: 5px 5px $primaryColour;
         }
         &:focus {

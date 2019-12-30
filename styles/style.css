@@ -573,7 +573,6 @@ ul li {
   .projects__container:nth-of-type(even) .projects__image:nth-of-type(2) {
     left: -20px; }
   .projects__container:nth-of-type(even) .projects__link:hover, .projects__container:nth-of-type(even) .projects__link:focus {
-    text-shadow: -2px 2px 1px #1A477A;
     -webkit-box-shadow: -5px 5px #1A477A;
     box-shadow: -5px 5px #1A477A; }
   .projects__container:nth-of-type(2) .projects__toolItem:nth-of-type(6) {
@@ -658,6 +657,8 @@ ul li {
     padding-right: 0; }
   .projects__text {
     padding: 0 10px; }
+  .projects__textInner {
+    text-transform: lowercase; }
   .projects__description {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif; }
@@ -704,7 +705,6 @@ ul li {
       .projects__link {
         padding: 10px 30px; } }
     .projects__link:hover, .projects__link:focus {
-      text-shadow: 2px 2px 1px #1A477A;
       -webkit-box-shadow: 5px 5px #1A477A;
       box-shadow: 5px 5px #1A477A; }
     .projects__link:focus {
