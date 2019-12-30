@@ -18,7 +18,7 @@ myPortfolioApp.typedEvent = function() {
     const typed = new Typed('#header__descriptionInner', {
         strings: [
             'welcome to my site',
-            'front end developer'
+            'front end web developer'
         ],
         typeSpeed: 100,
         backSpeed: 20,
@@ -29,18 +29,23 @@ myPortfolioApp.typedEvent = function() {
 // Link event function controls the smooth scroll behaviour
 myPortfolioApp.linkEvent = function() {
     // scroll behaviour obtained from https://www.taniarascia.com/smooth-scroll-to-id-with-jquery/
-    const $navLink = $(".header__navItem a[href^='#']");  
-    const $scrollLink = $(".header__content a[href^='#']");
+    const $navLink = $(".header__link");  
+    const $scrollLink = $(".header__scrollLink");
 
     $navLink.add($scrollLink).on('click', function(e) {
         e.preventDefault();
 
-        var position = $($(this).attr('href')).offset().top;
+        let position = $($(this).attr('href')).offset().top;
 
         $('body, html').animate({
             scrollTop: position
         }, 500, 'swing');
     });
+
+    $navLink.on('click', function() {
+        $(this).blur();
+        $($(this).attr('href')).focus();
+    })
 }
 
 // Contact form function controls the ajax call when the form is submitted

@@ -33,10 +33,10 @@
         }
     }
     &__link {
-        border-bottom: 2px solid $white;
+        border: 2px solid $black;
         margin: 20px 0;
         padding: 5px;
-        background: $black;
+        background: $primaryColour;
         display: flex;
         letter-spacing: 2px;
         justify-content: space-between;
@@ -48,7 +48,8 @@
         transition: right 0.5s ease-in-out, color 0.3s ease-in-out;
         &:hover,
         &:focus {
-            color: $tertiaryColour;
+            box-shadow: -5px 5px $black;
+            color: $secondaryColour;
             right: 150px;
             @include resLieutenant {
                 right: 125px;

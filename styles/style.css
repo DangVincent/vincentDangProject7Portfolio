@@ -213,10 +213,10 @@ ul li {
   .header__navItem:last-child .header__link {
     margin-bottom: 0; }
   .header__link {
-    border-bottom: 2px solid #FFF;
+    border: 2px solid #000;
     margin: 20px 0;
     padding: 5px;
-    background: #000;
+    background: #1A477A;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -233,7 +233,9 @@ ul li {
     -o-transition: right 0.5s ease-in-out, color 0.3s ease-in-out;
     transition: right 0.5s ease-in-out, color 0.3s ease-in-out; }
     .header__link:hover, .header__link:focus {
-      color: #DE6C3B;
+      -webkit-box-shadow: -5px 5px #000;
+      box-shadow: -5px 5px #000;
+      color: #FEE265;
       right: 150px; }
       @media (max-width: 960px) {
         .header__link:hover, .header__link:focus {
