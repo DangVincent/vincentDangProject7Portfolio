@@ -7,10 +7,10 @@ A portfolio showcasing some of Vincent Dang's Projects
 * [HTML5]
 * [CSS3]
 * [JavaScript]
-* [Formspree](https://formspree.io/)
-* [VSCode](https://code.visualstudio.com/)
-* [jQuery](https://jquery.com/)
-* [Sass](https://sass-lang.com/)
-* [VantaJS](https://www.vantajs.com/)
+* [VSCode]
+* [jQuery] 
+* [Sass]
+* [Formspree](https://formspree.io/) - Used to POST and submit contact form
+* [VantaJS](https://www.vantajs.com/) - Used to animate the header background
 ## Authors
 * **Vincent Dang** - [DangVincent](https://github.com/DangVincent)
