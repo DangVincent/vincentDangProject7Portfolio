@@ -4,12 +4,12 @@
 ## Description
 A portfolio showcasing some of Vincent Dang's Projects
 ## Built With
-* [HTML5]
-* [CSS3]
-* [JavaScript]
-* [VSCode]
-* [jQuery] 
-* [Sass]
+* HTML5
+* CSS3
+* JavaScript
+* VSCode
+* jQuery 
+* Sass
 * [Formspree](https://formspree.io/) - Used to POST and submit contact form
 * [VantaJS](https://www.vantajs.com/) - Used to animate the header background
 ## Authors
