@@ -10,7 +10,9 @@ A portfolio showcasing some of Vincent Dang's Projects
 * VSCode
 * jQuery 
 * Sass
+* [Prepros](https://prepros.io/) - Sass compiler
 * [Formspree](https://formspree.io/) - Used to POST and submit contact form
-* [VantaJS](https://www.vantajs.com/) - Used to animate the header background
+* [Vanta.js](https://www.vantajs.com/) - Used to animate the header background
+* [Typed.js](https://github.com/mattboldt/typed.js/) - A libary that types any string and is created by Matt Boldt
 ## Authors
 * **Vincent Dang** - [DangVincent](https://github.com/DangVincent)
