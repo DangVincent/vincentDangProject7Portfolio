@@ -14,6 +14,8 @@ A portfolio showcasing some of Vincent Dang's Projects
 * [Prepros](https://prepros.io/) - Sass compiler
 * [Formspree](https://formspree.io/) - Used to POST and submit contact form
 * [Vanta.js](https://www.vantajs.com/) - Used to animate the header background
-* [Typed.js](https://github.com/mattboldt/typed.js/) - A libary that types any string and is created by Matt Boldt
+* [Typed.js](https://github.com/mattboldt/typed.js/) - A libary that types any string and is created by Matt
+Boldt
+* [Sweet Alerts 2](https://cdn.jsdelivr.net/npm/sweetalert2@9) - Used to animate alerts for users when an event occurs
 ## Authors
 * **Vincent Dang** - [DangVincent](https://github.com/DangVincent)
