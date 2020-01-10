@@ -95,7 +95,7 @@ myPortfolioApp.contactFormEvent = function() {
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
-                text: 'Please enter a valid email!'
+                text: 'Please enter a valid name and email!'
             });
         }
     })
