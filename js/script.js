@@ -57,12 +57,13 @@ myPortfolioApp.contactFormEvent = function() {
     const $message = $('#message');
     // email regular expression obtained from https://emailregex.com/
     const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
+    const nameRegExp = /^\s+$/;
+
     $form.on('submit', function(event) {
         event.preventDefault();
         const validEmail = ($email.val()).match(emailRegExp);
-        $name.prop('disabled', false);
-        if (validEmail) {
+        const validName = ($name.val()).match(nameRegExp);
+        if (validEmail && !validName) {
             const emailMessage = `Name: ${$name.val()}\nEmail Address: ${$email.val()}\nMessage: ${$message.val()}`;
             $.ajax({
                 url: 'https://formspree.io/xpzqzavo', 
