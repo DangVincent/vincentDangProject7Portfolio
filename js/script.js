@@ -10,6 +10,11 @@ myPortfolioApp.backgroundEffect = function() {
         waveSpeed: 0.60,
         zoom: 0.9
     });
+
+    // Gets the date year
+    const $year = $('#year');
+    const date = new Date().getFullYear();
+    $year.text(date);
 }
 
 // Typed event function will control how the header description is typed out 
